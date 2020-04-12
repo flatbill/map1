@@ -1,0 +1,26 @@
+
+<div class='cgMain'>
+  <pre class='subtitle'>       words here are from app.component.html   </pre>
+  <div> <!-- start of routing choice area-->
+   <label class="switchPoo"> 
+      <input  type="checkbox" (click)='routeOnOffClick()'>
+      <span class="sliderPoo"> </span>
+    </label>
+    <span > &nbsp; Routing &nbsp; {{routeOnOffTxt}} </span>
+  </div> <!-- end of routing choice area-->
+  <pre> below this agm-map1</pre>
+  <app-map1 
+    [inputMsg1FromParent]="msg1" 
+    [inputRouteOnOffFromParent]="routeOnOffTxt" 
+    class='gt2'    >
+    <!--  see inputMsg1FromParent in map1.component.ts  -->
+    <!--  see msg1                in app.component.ts  -->
+
+      <!--  component stuff magically fills in here -->
+  </app-map1>
+  
+  
+  <pre>
+      this is the end of app.componenet.html 
+  </pre>
+  </div>
