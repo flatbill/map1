@@ -1,26 +1,44 @@
+<div class='panel is-primary'>
+  <div class="panel-heading"> 
+    Fly New Sky 	
+    <!-- hamburger-ish icon: -->
+    <button class='button is-primary is-pulled-right is-small '
+      (click)='hamburgOnOffClick()'    > 
+      &equiv; 
+  </button>
+  </div>
+</div>
 
-<div class='cgMain'>
-  <pre class='subtitle'>       words here are from app.component.html   </pre>
-  <div> <!-- start of routing choice area-->
+  <div class='panel is-info' *ngIf="showMenuTf">
+    <div class="panel-heading"> 
+      Menu
+    </div>
+    
+    <p class="panel-tabs">
+      <button class='button'>Profile</button>
+      <button class='button'>Routes</button>
+      <button class='button'>Airports, Waypoints & Overlays</button>
+    </p>
+
    <label class="switchPoo"> 
       <input  type="checkbox" (click)='routeOnOffClick()'>
       <span class="sliderPoo"> </span>
     </label>
-    <span > &nbsp; Routing &nbsp; {{routeOnOffTxt}} </span>
-  </div> <!-- end of routing choice area-->
-  <pre> below this agm-map1</pre>
+    <span > &nbsp; Map Click-to-Route &nbsp; {{routeOnOffTxt}} </span>
+  <ul>
+    <li *ngFor="let item of items" >      
+      <a class="panel-block"> {{item}} </a>
+    </li>
+  </ul>
+</div> 
   <app-map1 
     [inputMsg1FromParent]="msg1" 
     [inputRouteOnOffFromParent]="routeOnOffTxt" 
-    class='gt2'    >
-    <!--  see inputMsg1FromParent in map1.component.ts  -->
-    <!--  see msg1                in app.component.ts  -->
-
-      <!--  component stuff magically fills in here -->
+    class='gt2'    
+  >
+    <!--  see inputMsg1FromParent in map1.component.ts   -->
+    <!--  see msg1                in app.component.ts    -->
+    <!--  component stuff magically fills into app-map1  -->
   </app-map1>
   
   
-  <pre>
-      this is the end of app.componenet.html 
-  </pre>
-  </div>
