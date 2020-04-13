@@ -1,12 +1,16 @@
-<div class='panel is-primary'>
-  <div class="panel-heading"> 
-    Fly New Sky 	
-    <!-- hamburger-ish icon: -->
-    <button class='button is-primary is-pulled-right is-small '
-      (click)='hamburgOnOffClick()'    > 
-      &equiv; 
-  </button>
-  </div>
+<div class="level has-background-primary is-marginless">
+      <span class='level-left'>
+        <span class=' subtitle '> 
+          &nbsp; Fly New Sky 
+        </span>
+      </span>
+      <span class='level-right'>
+        <button class='button is-primary is-pulled-right'
+              (click)='hamburgOnOffClick()'    
+        > 
+            &equiv; 
+        </button>
+      </span>
 </div>
 
   <div class='panel is-info' *ngIf="showMenuTf">
